@@ -1,5 +1,10 @@
 run = "cowsay Configure me!"
 entrypoint = "README.md"
+modules = ["bash", "gcloud", "nodejs-18", "vue-node-18", "typescript-language-server", "python-with-prybar-3.10", "nodejs-with-prybar-18", "java-graalvm22.3"]
 
 [nix]
 channel = "stable-24_05"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
