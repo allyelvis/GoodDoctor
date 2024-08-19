@@ -54,9 +54,6 @@ router.put('/:id', auth, async (req, res) => {
     const { status } = req.body;
 
     try {
-        if (req.user.role !== 'doctor')
-# Continuing from the previous point
-
         if (req.user.role !== 'doctor') {
             return res.status(403).json({ msg: 'Access denied: Only doctors can update appointments' });
         }
