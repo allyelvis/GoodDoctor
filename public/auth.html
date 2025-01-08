@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodDoctor - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Welcome to GoodDoctor</h1>
+        <p>Sign in or create an account to continue</p>
+
+        <form id="authForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+
+            <button type="submit" id="signInBtn">Sign In</button>
+            <button type="button" id="registerBtn">Create Account</button>
+        </form>
+
+        <p id="error-msg"></p>
+    </div>
+
+    <script src="firebase-init.js" type="module"></script>
+    <script src="auth.js" type="module"></script>
+</body>
+</html>

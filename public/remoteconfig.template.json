@@ -1,0 +1,74 @@
+{
+  "parameters": {
+    "app_welcome_message": {
+      "defaultValue": {
+        "value": "Welcome to GoodDoctor! Your health, our priority."
+      },
+      "description": "Welcome message displayed on the homepage"
+    },
+    "feature_appointment_booking": {
+      "defaultValue": {
+        "value": "true"
+      },
+      "description": "Enable or disable appointment booking feature"
+    },
+    "max_appointments_per_day": {
+      "defaultValue": {
+        "value": "10"
+      },
+      "description": "Maximum number of appointments allowed per day"
+    },
+    "maintenance_mode": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "Set to true to put the app into maintenance mode"
+    },
+    "ui_theme": {
+      "defaultValue": {
+        "value": "light"
+      },
+      "conditionalValues": {
+        "android": {
+          "value": "dark"
+        },
+        "ios": {
+          "value": "light"
+        }
+      },
+      "description": "UI theme for the app (light or dark mode)"
+    }
+  },
+  "parameterGroups": {
+    "ui_settings": {
+      "description": "Parameters for UI customization",
+      "parameters": {
+        "ui_theme": {},
+        "app_welcome_message": {}
+      }
+    },
+    "features": {
+      "description": "Feature toggles",
+      "parameters": {
+        "feature_appointment_booking": {},
+        "maintenance_mode": {}
+      }
+    },
+    "limits": {
+      "description": "Application limits",
+      "parameters": {
+        "max_appointments_per_day": {}
+      }
+    }
+  },
+  "conditions": [
+    {
+      "name": "android",
+      "expression": "device.os == 'android'"
+    },
+    {
+      "name": "ios",
+      "expression": "device.os == 'ios'"
+    }
+  ]
+}

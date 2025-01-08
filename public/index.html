@@ -14,6 +14,14 @@
             <p>Your trusted medical appointment booking platform</p>
         </header>
 
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="auth.html">Sign In / Register</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+
         <section class="main">
             <h2>Book an Appointment</h2>
             <form action="/api/appointments" method="POST">
@@ -41,5 +49,8 @@
             <p>&copy; 2025 GoodDoctor. All Rights Reserved.</p>
         </footer>
     </div>
+
+    <script src="firebase-init.js" type="module"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>

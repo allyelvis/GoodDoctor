@@ -1,0 +1,22 @@
+{
+  "name": "gooddoctor",
+  "version": "1.0.0",
+  "description": "A medical appointment booking platform with Firebase Authentication",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo \"No build process specified\"",
+    "deploy": "firebase deploy"
+  },
+  "dependencies": {
+    "firebase": "^11.1.0",
+    "live-server": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.3"
+  },
+  "author": "Ally Elvis Nzeyimana",
+  "license": "MIT"
+}
