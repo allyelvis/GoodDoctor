@@ -3,53 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoodDoctor - Home</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoodDoctor - Medical Appointments</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>GoodDoctor</h1>
-            <nav>
-                <ul>
-                    <li><a href="auth.html">Sign In / Sign Up</a></li>
-                    <li><a href="dashboard.html">Dashboard</a></li> <!-- Added Dashboard link -->
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Welcome to GoodDoctor</h1>
+            <p>Your trusted medical appointment booking platform</p>
+        </header>
 
-    <section class="hero-section">
-        <div class="hero-container">
-            <h2>Welcome to GoodDoctor</h2>
-            <p>Your health is our priority. Book appointments, consult with doctors, and manage your health easily.</p>
-            <a href="auth.html" class="cta-button">Get Started</a>
-        </div>
-    </section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="auth.html">Sign In / Register</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
 
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <h3>About GoodDoctor</h3>
-            <p>GoodDoctor is a healthcare platform that connects patients with medical professionals. We provide easy access to a wide range of specialists, enabling you to book appointments, consult with doctors, and manage your health records all in one place.</p>
-        </div>
-    </section>
+        <section class="main">
+            <h2>Book an Appointment</h2>
+            <form action="/api/appointments" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <h3>Contact Us</h3>
-            <p>If you have any questions or need assistance, feel free to reach out to us.</p>
-            <p>Email: support@gooddoctor.com</p>
-        </div>
-    </section>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
 
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2025 GoodDoctor. All rights reserved.</p>
-        </div>
-    </footer>
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="doctor">Select Doctor</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="dr_smith">Dr. Smith</option>
+                    <option value="dr_jones">Dr. Jones</option>
+                    <option value="dr_doe">Dr. Doe</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 GoodDoctor. All Rights Reserved.</p>
+        </footer>
+    </div>
 
     <script src="firebase-init.js" type="module"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
