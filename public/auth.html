@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoodDoctor - Login</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - GoodDoctor</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="auth-container">
-        <h1>Welcome to GoodDoctor</h1>
-        <p>Sign in or create an account to continue</p>
+    <div class="container">
+        <header>
+            <h1>Login to GoodDoctor</h1>
+        </header>
 
-        <form id="authForm">
-            <label for="email">Email</label>
-            <input type="email" id="email" required>
+        <section class="auth">
+            <button id="google-login">Login with Google</button>
+        </section>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" required>
-
-            <button type="submit" id="signInBtn">Sign In</button>
-            <button type="button" id="registerBtn">Create Account</button>
-        </form>
-
-        <p id="error-msg"></p>
+        <footer>
+            <p>&copy; 2025 GoodDoctor. All Rights Reserved.</p>
+        </footer>
     </div>
 
-    <script src="firebase-init.js" type="module"></script>
-    <script src="auth.js" type="module"></script>
+    <script src="js/firebase-init.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
