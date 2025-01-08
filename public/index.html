@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GoodDoctor - Medical Appointments</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
@@ -14,17 +14,9 @@
             <p>Your trusted medical appointment booking platform</p>
         </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="auth.html">Sign In / Register</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-            </ul>
-        </nav>
-
         <section class="main">
             <h2>Book an Appointment</h2>
-            <form action="/api/appointments" method="POST">
+            <form id="appointment-form">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -50,7 +42,7 @@
         </footer>
     </div>
 
-    <script src="firebase-init.js" type="module"></script>
-    <script src="index.js" type="module"></script>
+    <script src="js/firebase-init.js"></script>
+    <script src="js/bookAppointment.js"></script>
 </body>
 </html>
