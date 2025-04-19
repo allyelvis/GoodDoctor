@@ -9,7 +9,7 @@
     "deploy": "firebase deploy"
   },
   "dependencies": {
-    "firebase": "^11.1.0",
+    "firebase": "^11.5.0",
     "live-server": "^1.2.0"
   },
   "devDependencies": {
